@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar";
 
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 
@@ -16,7 +18,10 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        {/* Show Signup first on root */}
+        <Route path="/" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
 
