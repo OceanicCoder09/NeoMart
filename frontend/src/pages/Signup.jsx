@@ -1,9 +1,7 @@
-// src/pages/Signup.jsx
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
-const BACKEND_URL = "http://localhost:3001";
+import { BACKEND_URL } from "../config";
 
 const Signup = () => {
   const [form, setForm] = useState({ username: "", password: "" });
@@ -18,7 +16,7 @@ const Signup = () => {
     try {
       const res = await axios.post(`${BACKEND_URL}/api/signup`, form);
       setMessage(`User created: ${res.data.username}`);
-      setTimeout(() => navigate("/login"), 1000); // Redirect to login
+      setTimeout(() => navigate("/login"), 1000);
     } catch (err) {
       setMessage(err.response?.data?.error || "Signup failed");
     }
