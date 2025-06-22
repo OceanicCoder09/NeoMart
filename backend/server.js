@@ -84,6 +84,9 @@ app.post("/api/login", async (req, res)=>{
     console.error("Error logging in", error);
   }
 })
+app.get("/", (req, res) => {
+  res.send("🟢 Backend is working!");
+});
 // Run server after DB setup
 initDB().then(() => {
   // seedDatabase(); // Only seed after table is created
