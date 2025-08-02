@@ -1,6 +1,4 @@
-<h1 align="center">✨ PERN Stack Tutorial ✨</h1>
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
 
 Highlights:
 
